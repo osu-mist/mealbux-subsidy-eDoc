@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="ns:workflow" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ns:workflow resource:WorkflowData">
+    <documentTypes xmlns="ns:workflow/DocumentType" xsi:schemaLocation="ns:workflow/DocumentType resource:DocumentType">
+        <documentType>
+            <name>MealBux Subsidy Request DocType</name>
+            <description>MealBux Subsidy Request DocType Description</description>
+            <label>MealBux Subsidy Request DocType Label</label>
+            <postProcessorName>org.kuali.rice.edl.framework.workflow.EDocLitePostProcessor</postProcessorName>
+            <superUserGroupName namespace="KUALI">Mealbux Approvers</superUserGroupName>
+            <blanketApprovePolicy>NONE</blanketApprovePolicy>
+            <defaultExceptionGroupName namespace="KUALI">MealBux Exceptions</defaultExceptionGroupName>
+            <docHandler>${workflow.url}/EDocLite</docHandler>
+            <active>true</active>
+            <routingVersion>2</routingVersion>
+            <routePaths>
+                <routePath>
+                    <start name="Initiated"/>
+                </routePath>
+            </routePaths>
+            <routeNodes>
+                <start name="Initiated">
+                    <activationType>P</activationType>
+                    <mandatoryRoute>false</mandatoryRoute>
+                    <finalApproval>false</finalApproval>
+                </start>
+            </routeNodes>
+        </documentType>
+    </documentTypes>
+</data>
+
