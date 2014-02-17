@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="ns:workflow" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ns:workflow resource:WorkflowData">
+    <edoclite xmlns="ns:workflow/EDocLite" xsi:schemaLocation="ns:workflow/EDocLite resource:EDocLite">
+        <edl name="Mealbux Subsidy Request" title="Mealbux Subsidy Request">
+            <security />
+            <createInstructions>This application is due first Friday of the term. Please verify your information is correct below and fill in required fields:</createInstructions>
+            <instructions>These are the plain instructions @todo: where is this used???</instructions>
+            <validations />
+            <attributes />
+
+            <fieldDef name="term" title="Term">
+                <value>Select</value>
+                <display>
+                    <type>select</type>
+                    <values title="Fall">Fall</values>
+                    <values title="Winter">Winter</values>
+                    <values title="Spring">Spring</values>
+                    <values title="Summer">Summer</values>
+                </display>
+                <validation required="true"/>
+            </fieldDef>
+
+            <fieldDef name="year" title="Year">
+                <value>Select</value>
+                <display>
+                    <type>select</type>
+                    <values title="2013">2013</values>
+                    <values title="2014">2014</values>
+                    <values title="2015">2015</values>
+                </display>
+                <validation required="true"/>
+            </fieldDef>
+
+            <fieldDef name="name" title="Name">
+                <display>
+                    <type>text</type>
+                </display>
+                <validation required="true"/>
+            </fieldDef>
+
+            <fieldDef name="osuid" title="OSU ID #">
+                <display>
+                    <type>text</type>
+                </display>
+                <validation required="true"/>
+            </fieldDef>
+
+            <fieldDef name="address" title="Address">
+                <display>
+                    <type>text</type>
+                </display>
+                <validation required="true"/>
+            </fieldDef>
+
+            <fieldDef name="city" title="City">
+                <display>
+                    <type>text</type>
+                </display>
+                <validation required="true"/>
+            </fieldDef>
+
+            <fieldDef name="state" title="Sate">
+                <display>
+                    <type>text</type>
+                </display>
+                <validation required="true"/>
+            </fieldDef>
+
+            <fieldDef name="zip" title="Zip">
+                <display>
+                    <type>text</type>
+                </display>
+                <validation required="true"/>
+            </fieldDef>
+
+            <fieldDef name="email" title="Email">
+                <display>
+                    <type>text</type>
+                </display>
+                <validation required="true"/>
+            </fieldDef>
+
+            <fieldDef name="phone" title="Phone">
+                <display>
+                    <type>text</type>
+                </display>
+                <validation required="true"/>
+            </fieldDef>
+
+            <fieldDef name="preferredContactMethod" title="Best way to contact you">
+                <value>Email</value>
+                <display>
+                    <type>radio</type>
+                    <values title="Email">Email</values>
+                    <values title="Phone">Phone</values>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="housing" title="Type of Housing">
+                <value>Select</value>
+                <display>
+                    <type>select</type>
+                    <values title="Residence Hall">Residence Hall</values>
+                    <values title="Student Co-op">Student Co-op</values>
+                    <values title="Greek House">Greek House</values>
+                    <values title="Family Housing">Family Housing</values>
+                    <values title="Rental">Rental</values>
+                    <values title="Currently without">Currently without</values>
+                    <values title="Owned Home">Owned Home</values>
+                    <values title="Other">Other</values>
+                </display>
+                <validation required="true"/>
+            </fieldDef>
+
+            <fieldDef name="otherHousing" title="If Other, specify">
+                <display>
+                    <type>text</type>
+                </display>
+                <validation required="false"/>
+            </fieldDef>
+
+            <fieldDef name="studentStatus" title="Student Status">
+                <value>Select</value>
+                <display>
+                    <type>select</type>
+                    <values title="Graduate">Graduate</values>
+                    <values title="Undergraduate">Undergraduate</values>
+                </display>
+                <validation required="true"/>
+            </fieldDef>
+
+            <fieldDef name="residentStatus" title="Resident Status">
+                <value>Select</value>
+                <display>
+                    <type>select</type>
+                    <values title="In State">In State</values>
+                    <values title="Out of State">Out of State</values>
+                    <values title="International">International</values>
+                </display>
+                <validation required="true"/>
+            </fieldDef>
+
+            <fieldDef name="intoStudent" title="Are you an INTO Student:">
+                <display>
+                    <type>radio</type>
+                    <values title="Yes">Yes</values>
+                    <values title="No">No</values>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="dependents" title="Number of dependents (not including yourself)">
+                <display>
+                    <type>text</type>
+                </display>
+                <validation required="true"/>
+            </fieldDef>
+
+            <fieldDef name="osuIncome" title="Personal Monthly Total Gross Income from OSU job(s)">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="nonosuIncome" title="Personal Monthly Total Income from non-OSU job(s)">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="spouseIncome" title="Spouse/Domestic Partner Monthly Total Income from job(s)">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="governmentBenefits" title="US Government Benefits">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="governmentBenefitsOptions" title="US Government Benefits Checkboxes">
+                <display>
+                    <type>checkbox</type>
+                    <values title="TANF">TANF</values>
+                    <values title="WIC">WIC</values>
+                    <values title="SNAP">SNAP</values>
+                    <values title="SSI">SSI</values>
+                    <values title="Veterans">Veterans</values>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="foreignBenefits" title="Foreign Government Support">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="familySupport" title="Family/Parent monetary support">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="investmentIncome" title="Investment Income">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="financialAidLevel" title="Financial Aids Need Level">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="otherScholarships" title="Other Scholarships">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="bankLoans" title="Bank or Personal Loans">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="cashAssets" title="Cash Assets">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="termCharges" title="Term charges">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="incidentalFee" title="Incidental fee">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="dependentCare" title="Child or Dependent Care">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="childSupport" title="Child Support">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="insurance" title="Health Insurance Payments">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="medicalExpenses" title="Medical Expenses (not covered by health insurance)">
+                <display>
+                    <type>text</type>
+                </display>
+            </fieldDef>
+
+            <fieldDef name="subsidyPrograms" title="Select the subsidy programs you'd like to apply for">
+                <display>
+                    <type>checkbox</type>
+                    <values title="MealBux Subsidy">Mealbux Subsidy</values>
+                    <values title="Health Insurance Subsidy">Health Insurance Subsidy</values>
+                    <values title="Childcare Subsidy">Childcare Subsidy</values>
+                </display>
+            </fieldDef>
+
+        </edl>
+
+        <style name="MealBuxSubsidyStyle">
+            <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:my-class="xalan://org.kuali.rice.edl.framework.util.EDLFunctions" version="1.0">
+
+                <xsl:include href="widgets" />
+                <xsl:output indent="yes" method="html" omit-xml-declaration="yes" version="4.0.1"/>
+                <xsl:variable name="actionable" select="/documentContent/documentState/actionable" />
+                <xsl:variable name="docHeaderId" select="/documentContent/documentState/docId" />
+                <xsl:variable name="editable" select="/documentContent/documentState/editable" />
+                <xsl:variable name="globalReadOnly" select="/documentContent/documentState/editable != 'true'" />
+                <xsl:variable name="docStatus" select="//documentState/workflowDocumentState/status" />
+                <xsl:variable name="isAtNodeInitiated" select="my-class:isAtNode($docHeaderId, 'Initiated')" />
+                <xsl:variable name="isPastInitiated" select="my-class:isNodeInPreviousNodeList('Initiated', $docHeaderId)" />
+                <xsl:variable name="isUserInitiator" select="my-class:isUserInitiator($docHeaderId)" />
+
+                <xsl:param name="overrideMain" select="'true'" />
+
+                <xsl:template name="mainForm">
+                    <!--<!DOCTYPE html/>-->
+                    <html xmlns="" lang="en">
+                        <head>
+                            <link href="/kr-dev/themes/bootstrap/stylesheets/bootstrap.2.3.3.min.css" rel="stylesheet" type="text/css" />
+                            <script src="/kr-dev/plugins/jquery/jquery-1.8.3.js"></script>
+
+                            <script src="/kr-dev/themes/bootstrap/scripts/bootstrap.2.3.3.min.js"></script>
+
+                            <xsl:call-template name="htmlHead" />
+
+                            <script language="javascript"><![CDATA[
+                                function cry(text){
+                                    var number = parseInt(text)
+                                    if (number < 1) {
+                                        alert('writing js within xml makes angels cry :(');
+                                        return false;
+                                    }
+                                    return true;
+                                }
+                            ]]></script>
+                        </head>
+                        <body onload="onPageLoad()">
+                            <xsl:call-template name="header" />
+                            <xsl:call-template name="instructions" />
+                            <xsl:call-template name="errors" />
+                            <xsl:variable name="formTarget" select="'EDocLite'" />
+
+                            <form action="{$formTarget}" enctype="multipart/form-data" id="edoclite" method="post" onsubmit="return validateOnSubmit(this)" class="form-horizontal">
+                                <xsl:call-template name="hidden-params" />
+                                <xsl:call-template name="mainBody" />
+                                <xsl:call-template name="notes" />
+                                <br />
+                                <xsl:call-template name="buttons" />
+                            </form>
+                        </body>
+                    </html>
+                </xsl:template>
+
+                <xsl:template name="mainBody">
+                    <!-- debug: print variables as html comments -->
+                    <!-- $docStatus=<xsl:value-of select="$docStatus" /> -->
+
+                    <div class="container-fluid">
+                        <h2>Personal Information</h2>
+                        <div class="row">
+                            <div class="span10 offset2">
+                                <div class="control-group">
+                                    <label class="control-label">Applying for mealbux subsidy for:</label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'term'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'year'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'onid'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'onid'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'osuid'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'osuid'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <fieldset>
+                                    <legend>Address</legend>
+
+                                    <div class="control-group">
+                                        <label class="control-label">
+                                            <xsl:call-template name="widget_render">
+                                                <xsl:with-param name="fieldName" select="'address'"/>
+                                                <xsl:with-param name="renderCmd" select="'title'"/>
+                                            </xsl:call-template>
+                                        </label>
+
+                                        <div class="controls">
+                                            <xsl:call-template name="widget_render">
+                                                <xsl:with-param name="fieldName" select="'address'"/>
+                                                <xsl:with-param name="renderCmd" select="'input'"/>
+                                            </xsl:call-template>
+                                        </div>
+                                    </div>
+
+                                    <div class="control-group">
+                                        <label class="control-label">
+                                            <xsl:call-template name="widget_render">
+                                                <xsl:with-param name="fieldName" select="'city'"/>
+                                                <xsl:with-param name="renderCmd" select="'title'"/>
+                                            </xsl:call-template>
+                                        </label>
+
+                                        <div class="controls">
+                                            <xsl:call-template name="widget_render">
+                                                <xsl:with-param name="fieldName" select="'city'"/>
+                                                <xsl:with-param name="renderCmd" select="'input'"/>
+                                            </xsl:call-template>
+                                        </div>
+                                    </div>
+
+                                    <div class="control-group">
+                                        <label class="control-label">
+                                            <xsl:call-template name="widget_render">
+                                                <xsl:with-param name="fieldName" select="'state'"/>
+                                                <xsl:with-param name="renderCmd" select="'title'"/>
+                                            </xsl:call-template>
+                                        </label>
+
+                                        <div class="controls">
+                                            <xsl:call-template name="widget_render">
+                                                <xsl:with-param name="fieldName" select="'state'"/>
+                                                <xsl:with-param name="renderCmd" select="'input'"/>
+                                            </xsl:call-template>
+                                        </div>
+                                    </div>
+
+                                    <div class="control-group">
+                                        <label class="control-label">
+                                            <xsl:call-template name="widget_render">
+                                                <xsl:with-param name="fieldName" select="'zip'"/>
+                                                <xsl:with-param name="renderCmd" select="'title'"/>
+                                            </xsl:call-template>
+                                        </label>
+
+                                        <div class="controls">
+                                            <xsl:call-template name="widget_render">
+                                                <xsl:with-param name="fieldName" select="'zip'"/>
+                                                <xsl:with-param name="renderCmd" select="'input'"/>
+                                            </xsl:call-template>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'email'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'email'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'phone'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'phone'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'preferredContactMethod'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'preferredContactMethod'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'housing'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'housing'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+
+                                        <label class="control-label">
+                                            <xsl:call-template name="widget_render">
+                                                <xsl:with-param name="fieldName" select="'otherHousing'"/>
+                                                <xsl:with-param name="renderCmd" select="'title'"/>
+                                            </xsl:call-template>
+                                        </label>
+
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'otherHousing'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'studentStatus'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'studentStatus'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'residentStatus'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'residentStatus'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'intoStudent'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'intoStudent'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'dependents'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'dependents'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Earned Income (by Month)</h2>
+                        <div class="row">
+                            <div class="span10 offset2">
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'osuIncome'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'osuIncome'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'nonosuIncome'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'nonosuIncome'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'spouseIncome'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'spouseIncome'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <h3>Attach a pay stub for each employment outside of OSU</h3>
+                            </div>
+                        </div>
+
+                        <h2>Un-earned Income (by Month)</h2>
+                        <div class="row">
+                            <div class="span10 offset2">
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'governmentBenefits'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'foreignBenefits'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'governmentBenefitsOptions'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'foreignBenefits'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'familySupport'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'familySupport'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'familySupport'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'investmentIncome'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'investmentIncome'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Financial Aids (by Term)</h2>
+                        <div class="row">
+                            <div class="span10 offset2">
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'financialAidLevel'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'financialAidLevel'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'otherScholarships'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'otherScholarships'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'bankLoans'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'bankLoans'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'cashAssets'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'cashAssets'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Term Bill (by Term)</h2>
+                        <div class="row">
+                            <div class="span10 offset2">
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'termCharges'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'termCharges'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'incidentalFee'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'incidentalFee'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2>Special Expenditures (by Month)</h2>
+                        <div class="row">
+                            <div class="span10 offset2">
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'dependentCare'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'dependentCare'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'childSupport'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'childSupport'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'insurance'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'insurance'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'medicalExpenses'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'medicalExpenses'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <h3>Attach last month's receipt for each payment type</h3>
+                            </div>
+                        </div>
+
+                        <h2>Subsidy Programs</h2>
+                        <div class="row">
+                            <div class="span10 offset2">
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'subsidyPrograms'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'subsidyPrograms'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </xsl:template>
+            </xsl:stylesheet>
+        </style>
+
+        <association>
+            <docType>MealBux Subsidy Request DocType</docType>
+            <definition>Mealbux Subsidy Request</definition>
+            <style>MealBuxSubsidyStyle</style>
+            <active>true</active>
+        </association>
+    </edoclite>
+</data>
