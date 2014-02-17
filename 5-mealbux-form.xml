@@ -268,7 +268,7 @@
                 </display>
             </fieldDef>
 
-            <fieldDef name="subsidyPrograms" title="Select the subsidy programs you'd like to apply for">
+            <fieldDef name="subsidyPrograms" title="Subsidy programs you'd like to apply for">
                 <display>
                     <type>checkbox</type>
                     <values title="MealBux Subsidy">Mealbux Subsidy</values>
@@ -340,8 +340,8 @@
 
                     <div class="container-fluid">
                         <h2>Personal Information</h2>
-                        <div class="row">
-                            <div class="span10 offset2">
+                        <div class="row-fluid">
+                            <div class="span10 offset1">
                                 <div class="control-group">
                                     <label class="control-label">Applying for mealbux subsidy for:</label>
 
@@ -361,6 +361,22 @@
                                 <div class="control-group">
                                     <label class="control-label">
                                         <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'name'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
+
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'name'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
                                             <xsl:with-param name="fieldName" select="'onid'"/>
                                             <xsl:with-param name="renderCmd" select="'title'"/>
                                         </xsl:call-template>
@@ -390,73 +406,69 @@
                                     </div>
                                 </div>
 
-                                <fieldset>
-                                    <legend>Address</legend>
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'address'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
 
-                                    <div class="control-group">
-                                        <label class="control-label">
-                                            <xsl:call-template name="widget_render">
-                                                <xsl:with-param name="fieldName" select="'address'"/>
-                                                <xsl:with-param name="renderCmd" select="'title'"/>
-                                            </xsl:call-template>
-                                        </label>
-
-                                        <div class="controls">
-                                            <xsl:call-template name="widget_render">
-                                                <xsl:with-param name="fieldName" select="'address'"/>
-                                                <xsl:with-param name="renderCmd" select="'input'"/>
-                                            </xsl:call-template>
-                                        </div>
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'address'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
                                     </div>
+                                </div>
 
-                                    <div class="control-group">
-                                        <label class="control-label">
-                                            <xsl:call-template name="widget_render">
-                                                <xsl:with-param name="fieldName" select="'city'"/>
-                                                <xsl:with-param name="renderCmd" select="'title'"/>
-                                            </xsl:call-template>
-                                        </label>
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'city'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
 
-                                        <div class="controls">
-                                            <xsl:call-template name="widget_render">
-                                                <xsl:with-param name="fieldName" select="'city'"/>
-                                                <xsl:with-param name="renderCmd" select="'input'"/>
-                                            </xsl:call-template>
-                                        </div>
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'city'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
                                     </div>
+                                </div>
 
-                                    <div class="control-group">
-                                        <label class="control-label">
-                                            <xsl:call-template name="widget_render">
-                                                <xsl:with-param name="fieldName" select="'state'"/>
-                                                <xsl:with-param name="renderCmd" select="'title'"/>
-                                            </xsl:call-template>
-                                        </label>
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'state'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
 
-                                        <div class="controls">
-                                            <xsl:call-template name="widget_render">
-                                                <xsl:with-param name="fieldName" select="'state'"/>
-                                                <xsl:with-param name="renderCmd" select="'input'"/>
-                                            </xsl:call-template>
-                                        </div>
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'state'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
                                     </div>
+                                </div>
 
-                                    <div class="control-group">
-                                        <label class="control-label">
-                                            <xsl:call-template name="widget_render">
-                                                <xsl:with-param name="fieldName" select="'zip'"/>
-                                                <xsl:with-param name="renderCmd" select="'title'"/>
-                                            </xsl:call-template>
-                                        </label>
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'zip'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
 
-                                        <div class="controls">
-                                            <xsl:call-template name="widget_render">
-                                                <xsl:with-param name="fieldName" select="'zip'"/>
-                                                <xsl:with-param name="renderCmd" select="'input'"/>
-                                            </xsl:call-template>
-                                        </div>
+                                    <div class="controls">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'zip'"/>
+                                            <xsl:with-param name="renderCmd" select="'input'"/>
+                                        </xsl:call-template>
                                     </div>
-                                </fieldset>
+                                </div>
 
                                 <div class="control-group">
                                     <label class="control-label">
@@ -519,14 +531,18 @@
                                             <xsl:with-param name="fieldName" select="'housing'"/>
                                             <xsl:with-param name="renderCmd" select="'input'"/>
                                         </xsl:call-template>
+                                    </div>
+                                </div>
 
-                                        <label class="control-label">
-                                            <xsl:call-template name="widget_render">
-                                                <xsl:with-param name="fieldName" select="'otherHousing'"/>
-                                                <xsl:with-param name="renderCmd" select="'title'"/>
-                                            </xsl:call-template>
-                                        </label>
+                                <div class="control-group">
+                                    <label class="control-label">
+                                        <xsl:call-template name="widget_render">
+                                            <xsl:with-param name="fieldName" select="'otherHousing'"/>
+                                            <xsl:with-param name="renderCmd" select="'title'"/>
+                                        </xsl:call-template>
+                                    </label>
 
+                                    <div class="controls">
                                         <xsl:call-template name="widget_render">
                                             <xsl:with-param name="fieldName" select="'otherHousing'"/>
                                             <xsl:with-param name="renderCmd" select="'input'"/>
@@ -601,8 +617,8 @@
                         </div>
 
                         <h2>Earned Income (by Month)</h2>
-                        <div class="row">
-                            <div class="span10 offset2">
+                        <div class="row-fluid">
+                            <div class="span10 offset1">
                                 <div class="control-group">
                                     <label class="control-label">
                                         <xsl:call-template name="widget_render">
@@ -648,16 +664,25 @@
                                             <xsl:with-param name="fieldName" select="'spouseIncome'"/>
                                             <xsl:with-param name="renderCmd" select="'input'"/>
                                         </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">Total</label>
+
+                                    <div class="controls">
+                                        <span class="input-large uneditable-input" id="earnedTotal">Some value here</span>
                                     </div>
                                 </div>
 
                                 <h3>Attach a pay stub for each employment outside of OSU</h3>
+                                <p>Please use the notes section to attach files.</p>
                             </div>
                         </div>
 
                         <h2>Un-earned Income (by Month)</h2>
-                        <div class="row">
-                            <div class="span10 offset2">
+                        <div class="row-fluid">
+                            <div class="span10 offset1">
 
                                 <div class="control-group">
                                     <label class="control-label">
@@ -726,12 +751,20 @@
                                         </xsl:call-template>
                                     </div>
                                 </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">Total</label>
+
+                                    <div class="controls">
+                                        <span class="input-large uneditable-input" id="unearnedTotal">Some value here</span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
                         <h2>Financial Aids (by Term)</h2>
-                        <div class="row">
-                            <div class="span10 offset2">
+                        <div class="row-fluid">
+                            <div class="span10 offset1">
                                 <div class="control-group">
                                     <label class="control-label">
                                         <xsl:call-template name="widget_render">
@@ -793,14 +826,22 @@
                                             <xsl:with-param name="fieldName" select="'cashAssets'"/>
                                             <xsl:with-param name="renderCmd" select="'input'"/>
                                         </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">Total</label>
+
+                                    <div class="controls">
+                                        <span class="input-large uneditable-input" id="financialAidTotal">Some value here</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <h2>Term Bill (by Term)</h2>
-                        <div class="row">
-                            <div class="span10 offset2">
+                        <div class="row-fluid">
+                            <div class="span10 offset1">
 
                                 <div class="control-group">
                                     <label class="control-label">
@@ -831,14 +872,22 @@
                                             <xsl:with-param name="fieldName" select="'incidentalFee'"/>
                                             <xsl:with-param name="renderCmd" select="'input'"/>
                                         </xsl:call-template>
+                                    </div>
+                                </div>
+
+                                <div class="control-group">
+                                    <label class="control-label">Total</label>
+
+                                    <div class="controls">
+                                        <span class="input-large uneditable-input" id="termBillTotal">Some value here</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <h2>Special Expenditures (by Month)</h2>
-                        <div class="row">
-                            <div class="span10 offset2">
+                        <div class="row-fluid">
+                            <div class="span10 offset1">
 
                                 <div class="control-group">
                                     <label class="control-label">
@@ -902,14 +951,16 @@
                                         </xsl:call-template>
                                     </div>
                                 </div>
+
 
                                 <h3>Attach last month's receipt for each payment type</h3>
+                                <p>Please use the notes section to attach files.</p>
                             </div>
                         </div>
 
                         <h2>Subsidy Programs</h2>
-                        <div class="row">
-                            <div class="span10 offset2">
+                        <div class="row-fluid">
+                            <div class="span10 offset1">
 
                                 <div class="control-group">
                                     <label class="control-label">
