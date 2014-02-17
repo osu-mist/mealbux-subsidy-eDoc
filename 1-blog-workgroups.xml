@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns="ns:workflow" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ns:workflow resource:WorkflowData">
+  <groups xmlns="ns:workflow/Group" xsi:schemaLocation="ns:workflow/Group resource:Group">
+    <group>
+      <name>Mealbux Approvers</name>
+      <namespace>KUALI</namespace>
+      <description>Workgroup approval group for mealbux subsidy requests.</description>
+      <active>true</active>
+      <type>
+        <namespace>KUALI</namespace>
+        <name>Default</name>
+      </type>
+      <members>
+        <principalName>admin2</principalName>
+      </members>
+    </group>
+    <group>
+      <name>MealBux Exceptions</name>
+      <namespace>KUALI</namespace>
+      <description>Workgroup default exceptions group for mealbux subsidy requests.</description>
+      <active>true</active>
+      <type>
+        <namespace>KUALI</namespace>
+        <name>Default</name>
+      </type>
+      <members>
+        <principalName>director</principalName>
+      </members>
+    </group>
+   </groups>
+</data>
