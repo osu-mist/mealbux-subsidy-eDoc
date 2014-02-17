@@ -158,24 +158,40 @@
             <fieldDef name="osuIncome" title="Personal Monthly Total Gross Income from OSU job(s)">
                 <display>
                     <type>text</type>
+                    <meta>
+                        <name>id</name>
+                        <value>osuIncome</value>
+                    </meta>
                 </display>
             </fieldDef>
 
             <fieldDef name="nonosuIncome" title="Personal Monthly Total Income from non-OSU job(s)">
                 <display>
                     <type>text</type>
+                    <meta>
+                        <name>id</name>
+                        <value>nonosuIncome</value>
+                    </meta>
                 </display>
             </fieldDef>
 
             <fieldDef name="spouseIncome" title="Spouse/Domestic Partner Monthly Total Income from job(s)">
                 <display>
                     <type>text</type>
+                    <meta>
+                        <name>id</name>
+                        <value>spouseIncome</value>
+                    </meta>
                 </display>
             </fieldDef>
 
             <fieldDef name="governmentBenefits" title="US Government Benefits">
                 <display>
                     <type>text</type>
+                    <meta>
+                        <name>id</name>
+                        <value>governmentBenefits</value>
+                    </meta>
                 </display>
             </fieldDef>
 
@@ -193,54 +209,90 @@
             <fieldDef name="foreignBenefits" title="Foreign Government Support">
                 <display>
                     <type>text</type>
+                    <meta>
+                        <name>id</name>
+                        <value>foreignBenefits</value>
+                    </meta>
                 </display>
             </fieldDef>
 
             <fieldDef name="familySupport" title="Family/Parent monetary support">
                 <display>
                     <type>text</type>
+                    <meta>
+                        <name>id</name>
+                        <value>familySupport</value>
+                    </meta>
                 </display>
             </fieldDef>
 
             <fieldDef name="investmentIncome" title="Investment Income">
                 <display>
                     <type>text</type>
+                    <meta>
+                        <name>id</name>
+                        <value>investmentIncome</value>
+                    </meta>
                 </display>
             </fieldDef>
 
             <fieldDef name="financialAidLevel" title="Financial Aids Need Level">
                 <display>
                     <type>text</type>
+                    <meta>
+                        <name>id</name>
+                        <value>financialAidLevel</value>
+                    </meta>
                 </display>
             </fieldDef>
 
             <fieldDef name="otherScholarships" title="Other Scholarships">
                 <display>
                     <type>text</type>
+                    <meta>
+                        <name>id</name>
+                        <value>otherScholarships</value>
+                    </meta>
                 </display>
             </fieldDef>
 
             <fieldDef name="bankLoans" title="Bank or Personal Loans">
                 <display>
                     <type>text</type>
+                    <meta>
+                        <name>id</name>
+                        <value>bankLoans</value>
+                    </meta>
                 </display>
             </fieldDef>
 
             <fieldDef name="cashAssets" title="Cash Assets">
                 <display>
                     <type>text</type>
+                    <meta>
+                        <name>id</name>
+                        <value>cashAssets</value>
+                    </meta>
                 </display>
             </fieldDef>
 
             <fieldDef name="termCharges" title="Term charges">
                 <display>
                     <type>text</type>
+                    <meta>
+                        <name>id</name>
+                        <value>termCharges</value>
+                    </meta>
                 </display>
             </fieldDef>
 
             <fieldDef name="incidentalFee" title="Incidental fee">
                 <display>
                     <type>text</type>
+                    <meta>
+                        <name>id</name>
+                        <value>incidentalFee</value>
+                    </meta>
                 </display>
             </fieldDef>
 
@@ -307,14 +359,63 @@
                             <xsl:call-template name="htmlHead" />
 
                             <script language="javascript"><![CDATA[
-                                function cry(text){
-                                    var number = parseInt(text)
-                                    if (number < 1) {
-                                        alert('writing js within xml makes angels cry :(');
-                                        return false;
-                                    }
-                                    return true;
+                                function earnedIncomeTotal(){
+                                    var total = getValue(jQuery('#osuIncome').val()) +  getValue(jQuery('#nonosuIncome').val()) + getValue(jQuery('#spouseIncome').val());
+                                    jQuery('#earnedTotal').html(total);
                                 }
+
+                                function unearnedIncomeTotal(){
+                                    var total = getValue(jQuery('#governmentBenefits').val()) +  getValue(jQuery('#foreignBenefits').val()) + getValue(jQuery('#familySupport').val()) + getValue(jQuery('#investmentIncome').val());
+                                    jQuery('#unearnedTotal').html(total);
+                                }
+
+                                function financialAidTotal(){
+                                    var total = getValue(jQuery('#financialAidLevel').val()) +  getValue(jQuery('#otherScholarships').val()) + getValue(jQuery('#bankLoans').val()) + getValue(jQuery('#cashAssets').val());
+                                    jQuery('#financialAidTotal').html(total);
+                                }
+
+                                function termBillTotal(){
+                                    var total = getValue(jQuery('#termCharges').val()) +  getValue(jQuery('#incidentalFee').val());
+                                    jQuery('#termBillTotal').html(total);
+                                }
+
+                                /**
+                                 * Returns the numerical value of a field. If it is not a number, it returns 0.
+                                 */
+                                function getValue(text) {
+                                    if (text == "" || isNaN(text)) {
+                                        return 0;
+                                    } 
+                                    
+                                    return parseInt(text);
+                                }
+
+                                /**
+                                 * Add listeners to update the total values.
+                                 */
+                                jQuery(document).ready(function() {
+                                    // update totals when the read-only form loads
+                                    earnedIncomeTotal();
+                                    unearnedIncomeTotal();
+                                    financialAidTotal();
+                                    termBillTotal();
+
+                                    jQuery('#osuIncome, #nonosuIncome, #spouseIncome').change(function() {
+                                        earnedIncomeTotal();
+                                    });
+
+                                    jQuery('#governmentBenefits, #foreignBenefits, #familySupport').change(function() {
+                                        unearnedIncomeTotal();
+                                    });
+
+                                    jQuery('#financialAidLevel, #otherScholarships, #bankLoans, #cashAssets').change(function() {
+                                        financialAidTotal();
+                                    });
+
+                                    jQuery('#termCharges, #incidentalFee').change(function() {
+                                        termBillTotal();
+                                    });
+                                });
                             ]]></script>
                         </head>
                         <body onload="onPageLoad()">
@@ -369,22 +470,6 @@
                                     <div class="controls">
                                         <xsl:call-template name="widget_render">
                                             <xsl:with-param name="fieldName" select="'name'"/>
-                                            <xsl:with-param name="renderCmd" select="'input'"/>
-                                        </xsl:call-template>
-                                    </div>
-                                </div>
-
-                                <div class="control-group">
-                                    <label class="control-label">
-                                        <xsl:call-template name="widget_render">
-                                            <xsl:with-param name="fieldName" select="'onid'"/>
-                                            <xsl:with-param name="renderCmd" select="'title'"/>
-                                        </xsl:call-template>
-                                    </label>
-
-                                    <div class="controls">
-                                        <xsl:call-template name="widget_render">
-                                            <xsl:with-param name="fieldName" select="'onid'"/>
                                             <xsl:with-param name="renderCmd" select="'input'"/>
                                         </xsl:call-template>
                                     </div>
@@ -671,7 +756,7 @@
                                     <label class="control-label">Total</label>
 
                                     <div class="controls">
-                                        <span class="input-large uneditable-input" id="earnedTotal">Some value here</span>
+                                        <span class="input-large uneditable-input" id="earnedTotal">0</span>
                                     </div>
                                 </div>
 
@@ -756,7 +841,7 @@
                                     <label class="control-label">Total</label>
 
                                     <div class="controls">
-                                        <span class="input-large uneditable-input" id="unearnedTotal">Some value here</span>
+                                        <span class="input-large uneditable-input" id="unearnedTotal">0</span>
                                     </div>
                                 </div>
                             </div>
@@ -833,7 +918,7 @@
                                     <label class="control-label">Total</label>
 
                                     <div class="controls">
-                                        <span class="input-large uneditable-input" id="financialAidTotal">Some value here</span>
+                                        <span class="input-large uneditable-input" id="financialAidTotal">0</span>
                                     </div>
                                 </div>
                             </div>
@@ -879,7 +964,7 @@
                                     <label class="control-label">Total</label>
 
                                     <div class="controls">
-                                        <span class="input-large uneditable-input" id="termBillTotal">Some value here</span>
+                                        <span class="input-large uneditable-input" id="termBillTotal">0</span>
                                     </div>
                                 </div>
                             </div>
